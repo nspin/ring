@@ -1,3 +1,10 @@
+#![no_std]
+#![cfg(feature = "alloc")]
+
+extern crate alloc;
+
+use alloc::format;
+
 use ring::{signature, test};
 
 #[cfg(all(target_arch = "wasm32", target_os = "unknown"))]

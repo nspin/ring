@@ -12,6 +12,13 @@
 // OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
 // CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+#![no_std]
+#![cfg(feature = "alloc")]
+
+extern crate alloc;
+
+use alloc::vec;
+
 use core::num::NonZeroU32;
 use ring::{digest, error, pbkdf2, test, test_file};
 

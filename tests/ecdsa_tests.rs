@@ -12,6 +12,13 @@
 // OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
 // CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+#![no_std]
+#![cfg(feature = "alloc")]
+
+extern crate alloc;
+
+use alloc::format;
+
 use ring::{
     rand,
     signature::{self, KeyPair},
@@ -87,6 +94,7 @@ fn ecdsa_from_pkcs8_test() {
 }
 
 // Verify that, at least, we generate PKCS#8 documents that we can read.
+#[cfg(feature = "std")]
 #[test]
 fn ecdsa_generate_pkcs8_test() {
     let rng = rand::SystemRandom::new();

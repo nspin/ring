@@ -12,6 +12,13 @@
 // OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
 // CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+#![no_std]
+#![cfg(feature = "alloc")]
+
+extern crate alloc;
+
+use alloc::{vec, vec::Vec};
+
 use ring::{digest, error, hkdf, test, test_file};
 
 #[cfg(all(target_arch = "wasm32", target_os = "unknown"))]

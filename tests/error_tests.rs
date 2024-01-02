@@ -1,3 +1,5 @@
+#![no_std]
+
 #[cfg(feature = "std")]
 #[test]
 fn error_impl_std_error_error_test() {

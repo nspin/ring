@@ -159,3 +159,6 @@ mod sealed {
     // ```
     pub trait Sealed {}
 }
+
+const _PERLASM_CONFIGURED: () =
+    assert!((cfg!(perlasm) && !cfg!(no_perlasm)) || (!cfg!(perlasm) && cfg!(no_perlasm)));

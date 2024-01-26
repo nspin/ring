@@ -21,7 +21,7 @@ mod abi_assumptions {
     // https://github.com/briansmith/ring/issues/1832,
     // https://github.com/briansmith/ring/issues/1833.
     const _ASSUMES_SSE2: () =
-        assert!(cfg!(target_feature = "sse") && cfg!(target_feature = "sse2"));
+        assert!(!cfg!(perlasm) || (cfg!(target_feature = "sse") && cfg!(target_feature = "sse2")));
 
     #[cfg(target_arch = "x86_64")]
     const _ASSUMED_POINTER_SIZE: usize = 8;

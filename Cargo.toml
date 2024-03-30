@@ -217,16 +217,3 @@ rpath = false
 lto = true
 debug-assertions = false
 codegen-units = 1
-
-[workspace]
-members = [
-    # intentionally not a default member so that `cargo test` doesn't cause criterion.rs and all its
-    # dependencies to get built.
-    "bench",
-
-    "cavp",
-]
-default-members = [
-    ".",
-    "cavp"
-]

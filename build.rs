@@ -248,8 +248,6 @@ const LINUX_ABI: &[&str] = &[
     "linux",
     "redox",
     "solaris",
-    #[cfg(feature = "less-correct-none-os-has-linux-abi")]
-    "none",
 ];
 
 const WIN32N: &str = "win32n";

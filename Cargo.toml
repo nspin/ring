@@ -196,6 +196,7 @@ unstable-testing-arm-no-hw = []
 unstable-testing-arm-no-neon = []
 test_logging = []
 wasm32_unknown_unknown_js = ["getrandom/js"]
+less-correct-none-os-has-linux-abi = []
 
 # XXX: debug = false because of https://github.com/rust-lang/rust/issues/34122
 
